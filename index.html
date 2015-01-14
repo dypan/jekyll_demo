@@ -1,15 +1,53 @@
 ---
 layout: default
-title: my blog
+title: welcome
 ---
+<style type="text/css">
+        .show__logo {
+            border: solid 3px #eee;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background-color: #954a45;
+            vertical-align: central;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 85px;
+            text-align: center;
+        }
+
+        .outer {
+            display: table;
+            position: absolute;
+            height: 90%;
+            width: 90%;
+        }
+
+        .middle {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .inner {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 <h2>{{page.title}}</h2>
 <p>test change</p>
-<ul>
-	<li>
-		《明年今日》
-		<audio class="audioPlayer" controls="" autoplay="" preload="metadata" src="http://m1.music.126.net/we7n0zEnjlrl3Ei92sSIVg==/3214971999618758.mp3">
-        		Your browser does not support HTML5
-        	<code>audio</code>.
-        </li>
-    </audio>
-</ul>
+<div class="outer">
+        <div class="middle">
+                <div style="text-align:center">
+                    <span class="show__logo show__logo--list">我</span>
+                    <span class="show__logo show__logo--list" style="background-color:#ffd800">我</span>
+                    <span class="show__logo show__logo--list" style="background-color:#4cff00">想</span>
+                    <span class="show__logo show__logo--list" style="background-color:#00ff29">加</span>
+                    <span class="show__logo show__logo--list" style="background-color:#00ffff">下</span>
+                    <span class="show__logo show__logo--list" style="background-color:#a0674b">你</span>
+                    <span class="show__logo show__logo--list" style="background-color:#e8b647">微信</span>
+                    <span class="show__logo show__logo--list" style="background-color:#66bab7">:)</span>
+                </div>
+        </div>
+    </div>
