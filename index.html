@@ -432,21 +432,32 @@
             timeElapse(together, displayMode);
         });
 
-        if (!document.createElement('canvas').getContext) {
-            var msg = document.createElement("div");
-            msg.id = "errorMsg";
-            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
-            document.body.appendChild(msg);
-            $("#code").css("display", "none")
-            $("#copyright").css("position", "absolute");
-            $("#copyright").css("bottom", "10px");
-            document.execCommand("stop");
-        } else {
-            setTimeout(function () {
-                startHeartAnimation();
-            }, 2000);
-            adjustCodePosition();
+        function MyStart() {
+            if (!document.createElement('canvas').getContext) {
+                var msg = document.createElement("div");
+                msg.id = "errorMsg";
+                msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+                document.body.appendChild(msg);
+                $("#code").css("display", "none")
+                $("#copyright").css("position", "absolute");
+                $("#copyright").css("bottom", "10px");
+                document.execCommand("stop");
+            } else {
+                setTimeout(function () {
+                    startHeartAnimation();
+                }, 2000 * 5);
+                adjustCodePosition();
+            }
         }
+        MyStart();
+        setInterval(function () {
+            $("#garden").fadeOut(1000 * 10, function () {
+                // Animation complete.
+                garden.clear();
+                $("#garden").css("display", "block");
+                MyStart();
+            });
+        }, 1000 * 20);
     </script>
 </body>
 </html>
