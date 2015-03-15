@@ -444,20 +444,19 @@
                 document.execCommand("stop");
             } else {
                 setTimeout(function () {
-                    startHeartAnimation();
-                }, 2000 * 5);
+                }, 1000);
+                startHeartAnimation();
                 adjustCodePosition();
             }
         }
         MyStart();
         setInterval(function () {
-            $("#garden").fadeOut(1000 * 10, function () {
+            $("#garden").fadeOut(1000 * 5, function () {
                 // Animation complete.
                 garden.clear();
                 $("#garden").css("display", "block");
                 MyStart();
             });
-        }, 1000 * 20);
     </script>
 </body>
 </html>
